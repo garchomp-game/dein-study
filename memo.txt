@@ -1,0 +1,32 @@
+[denops] Connecting to channel `127.0.0.1:34141` [1/4]
+[denops] Failed to connect channel `127.0.0.1:34141` [1/4]: Vim(let):connection failed: connection refused
+[denops] Connecting to channel `127.0.0.1:34141` [2/4]
+[denops] Failed to connect channel `127.0.0.1:34141` [2/4]: Vim(let):connection failed: connection refused
+[denops] Connecting to channel `127.0.0.1:34141` [3/4]
+[denops] Failed to connect channel `127.0.0.1:34141` [3/4]: Vim(let):connection failed: connection refused
+[denops] Failed to connect channel `127.0.0.1:34141`: Vim(let):connection failed: connection refused
+[denops] Spawn server [1/4]
+[denops] Server started: ['deno', 'run', '-q', '--no-lock', '-A', '/home/garchomp-game/.cache/dpp/repos/github.com/vim-denops/denops.vim/denops/@denops-private/cli.ts', '--quiet', '--identit
+y', '--port', '0']
+[denops] Server listen: 127.0.0.1:43391
+[denops] Connecting to channel `127.0.0.1:43391` [1/4]
+[denops] Channel connected (127.0.0.1:43391)
+vim load_state is failed
+[denops] load plugin: ['dpp', '/home/garchomp-game/.cache/dpp/repos/github.com/Shougo/dpp.vim/denops/dpp/app.ts']
+[denops] DenopsReady
+[denops] 0 plugins are discovered
+[denops] DenopsPluginPre:dpp
+[denops] DenopsPluginPost:dpp
+[denops] {"plugins":[{"lazy":false,"repo":"preservim/nerdtree","on_cmd":"NERDTreeToggle","name":"nerdtree","dummy_commands":["NERDTreeToggle"]},{"lazy":true,"repo":"miyakogi/seiya.vim","on_c
+md":["SeiyaEnable","SeiyaDisable"],"name":"seiya.vim","dummy_commands":["SeiyaEnable","SeiyaDisable"]}],"stateLines":["augroup dpp-ext-lazy","  autocmd!","  autocmd FuncUndefined *","
+\\ : if '<afile>'->expand()->stridx('remote#') != 0","       \\ |   call dpp#ext#lazy#_on_func('<afile>'->expand())","       \\ | endif"," autocmd BufRead *? call dpp#ext#lazy#_on_default_ev
+ent('BufRead')"," autocmd BufNew,BufNewFile *? call dpp#ext#lazy#_on_default_event('BufNew')"," autocmd VimEnter *? call dpp#ext#lazy#_on_default_event('VimEnter')"," autocmd FileType *? cal
+l dpp#ext#lazy#_on_default_event('FileType')"," autocmd CmdUndefined * call dpp#ext#lazy#_on_pre_cmd('<afile>'->expand())","augroup END","if has('nvim')","let g:dpp#ext#_on_lua_plugins = {}"
+,"let g:dpp#ext#_called_lua = {}","lua <<END","table.insert(package.loaders, 1, (function()","  return function(mod_name)","    mod_root = string.match(mod_name, '^[^./]+')","    if vim.g['d
+pp#ext#_on_lua_plugins'][mod_root] then","      vim.fn['dpp#ext#lazy#_on_lua'](mod_name, mod_root)","    end","    if package.loaded[mod_name] ~= nil then","      local m = package.loaded[mo
+d_name]","      return function()","        return m","      end","    end","    return nil","  end","end)())","END","endif","command -complete=custom,dpp#ext#lazy#_dummy_complete -bang -bar
+ -range -nargs=* NERDTreeToggle call dpp#ext#lazy#_on_cmd('NERDTreeToggle', 'nerdtree', <q-args>,  '<bang>'->expand(), '<line1>'->expand(), '<line2>'->expand())","command -complete=custom,dp
+p#ext#lazy#_dummy_complete -bang -bar -range -nargs=* SeiyaEnable call dpp#ext#lazy#_on_cmd('SeiyaEnable', 'seiya.vim', <q-args>,  '<bang>'->expand(), '<line1>'->expand(), '<line2>'->expand(
+))","command -complete=custom,dpp#ext#lazy#_dummy_complete -bang -bar -range -nargs=* SeiyaDisable call dpp#ext#lazy#_on_cmd('SeiyaDisable', 'seiya.vim', <q-args>,  '<bang>'->expand(), '<lin
+e1>'->expand(), '<line2>'->expand())"]}
+dpp make_state() is done
