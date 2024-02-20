@@ -72,10 +72,12 @@ export class Config extends BaseConfig {
     const hooksFiles: string[] = [];
 
     tomls.forEach((toml) => {
-
-      for (const plugin of toml.plugins) {
-        recordPlugins[plugin.name] = plugin;
+      if (Array.isArray(toml.plugins)) {
+        for (const plugin of toml.plugins) {
+          recordPlugins[plugin.name] = plugin;
+        }
       }
+
 
       if (toml.ftplugins) {
         for (const filetype of Object.keys(toml.ftplugins)) {
@@ -101,7 +103,7 @@ export class Config extends BaseConfig {
       {
         plugins: Object.values(recordPlugins),
       },
-      ) as LazyMakeStateResult;
+    ) as LazyMakeStateResult;
 
     console.log(lazyResult);
 
