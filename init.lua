@@ -1,3 +1,5 @@
+require ('mapping')
+require('command')
 local dpp_src = "$HOME/.cache/dpp/repos/github.com/Shougo/dpp.vim"
 -- プラグイン内のLuaモジュールを読み込むため、先にruntimepathに追加する必要があります。
 vim.opt.runtimepath:prepend(dpp_src) 
